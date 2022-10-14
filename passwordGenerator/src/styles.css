@@ -21,6 +21,7 @@ body{
   justify-content: center;
   height: 100vh;
   width: 100vw;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%237b7b7b' fill-opacity='0.23' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 }
 
 .form{
@@ -28,7 +29,7 @@ body{
   padding: 20px;
   border-radius: 15px;
   width: 80%;
-  max-width: 700px;
+  max-width: 800px;
 }
 
 .option{
@@ -38,4 +39,127 @@ body{
 
 .option input{
   margin-right: 10px;
+}
+
+.password {
+  text-align: center;
+  margin: 30px 0;
+  text-decoration: underline;
+  color: var(--button-text-color);
+  font-weight: 600;
+}
+
+.button {
+  text-align: center;
+  background-color: var(--bg-color);
+  color: var(--button-text-color);
+  border-color: var(--border-color);
+  font-size: 1.5rem;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.button:hover {
+  background-color: var(--button-text-color);
+  color: var(--bg-color);
+}
+
+.container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.showPassword {
+  margin-top: 10px;
+}
+
+
+/* Input range styling */
+
+input[type=range] {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 18px 30px 18px 0;
+  width: 90%;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: var(--button-text-color);
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: -14px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: var(--button-text-color);
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: var(--button-text-color);
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: var(--text-color);
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: var(--button-text-color);
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]::-ms-fill-upper {
+  background: var(--button-text-color);
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]::-ms-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: var(--text-color);
+  cursor: pointer;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: var(--button-text-color);
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: var(--button-text-color);
 }

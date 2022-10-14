@@ -11,10 +11,13 @@
 
 <body>
   <form class="form" id="form">
-    <p id="password" class="password">Aquí aparecerá tu contraseña</p>
-    <div class="option">
-      <input type="range" name="length" id="" min="10" max="100">
+    <div class="container">
+      <p id="password" class="password">Aquí aparecerá tu contraseña</p>
       <p>Define el total de caracteres de tu contraseña</p>
+    </div>
+    <div class="option">
+      <input type="range" name="length" id="" min="10" max="50">
+      <p id="passwordLength" class="showPassword">25</p>
     </div>
     <div class="option">
       <input type="checkbox" name="letters" id="">
@@ -32,8 +35,8 @@
       <input type="checkbox" name="words" id="">
       <p>Incluir palabras</p>
     </div>
-    <div class="option">
-      <button type="submit" id="generate-button">Genera tu fuerte contraseña</button>
+    <div class="container">
+      <button class="button" type="submit" id="generate-button">Genera tu fuerte contraseña</button>
     </div>
   </form>
 

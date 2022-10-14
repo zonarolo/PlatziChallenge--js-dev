@@ -1,5 +1,6 @@
 const paragraphPassword = document.querySelector("#password");
 const form = document.querySelector("#form");
+const showLength = document.querySelector("#passwordLength");
 
 const letters = [
   "a",
@@ -48,7 +49,6 @@ function generatePassword(passwordLength, botonsitos) {
     arrayOfArrays.push(symbols);
   }
 
-  console.log(arrayOfArrays);
 
   let strongPassword = [];
   for (let i = 0; i < passwordLength; i++) {
@@ -59,12 +59,13 @@ function generatePassword(passwordLength, botonsitos) {
   }
 
   strongPassword = strongPassword.join("");
-  paragraphPassword.innerText = `Aquí aparecerá tu contraseña ${strongPassword}`;
+  paragraphPassword.innerText = strongPassword;
 }
 
 function getRandomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1));
 }
+
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -76,6 +77,7 @@ form.addEventListener("submit", (event) => {
     numbers: formElement.numbers.checked,
     symbols: formElement.symbols.checked,
   };
+  showLength.innerHTML = passwordLength;
 
   generatePassword(passwordLength, checks);
 });
